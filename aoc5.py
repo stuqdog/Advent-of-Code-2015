@@ -10,6 +10,4 @@ def check_if_nice(line):
     return 1
 
 with open("aoc5.txt") as f:
-    nice_count = (sum(check_if_nice(line) for line in f))
-
-print(nice_count)
+    print((sum(check_if_nice(line) for line in f)))
