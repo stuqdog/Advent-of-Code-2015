@@ -28,7 +28,7 @@ def determine_rule(line):
         return "assign_wire", rule
     return "error", line
 
-with open("aoc7.txt") as f:
+with open("aoc7b.txt") as f:
     for line in f:
         rule_type, rule = determine_rule(line)
         rules.append((rule_type, rule))
@@ -101,9 +101,6 @@ while True:
             break
     if len(to_delete) == 0 and len(rules) != 0:
         print("Something is wrong")
-        for rule in rules:
-            print(rule[1].group(0))
-        print(wires)
         break
     if not rules:
         break
